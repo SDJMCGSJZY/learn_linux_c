@@ -9,5 +9,7 @@ ADD_SUBDIRECTORY(11_4_1_pthread_exit)
 ADD_SUBDIRECTORY(11_5_1_pthread_join)
 ADD_SUBDIRECTORY(11_6_1_pthread_cancel)
 ADD_SUBDIRECTORY(11_6_2_pthread_setcancelstate)
+#为上一个项目的补充
+ADD_SUBDIRECTORY(11_6_2_1_pthread_setcancelstate)
 
 
