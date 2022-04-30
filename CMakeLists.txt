@@ -8,4 +8,6 @@ ADD_SUBDIRECTORY(11_3_1_pthread_create)
 ADD_SUBDIRECTORY(11_4_1_pthread_exit)
 ADD_SUBDIRECTORY(11_5_1_pthread_join)
 ADD_SUBDIRECTORY(11_6_1_pthread_cancel)
+ADD_SUBDIRECTORY(11_6_2_pthread_setcancelstate)
+
 
