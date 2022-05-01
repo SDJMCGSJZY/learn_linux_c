@@ -20,6 +20,7 @@ ADD_SUBDIRECTORY(11_6_3_2_pthread_testcancel)
 ADD_SUBDIRECTORY(11_7_1_pthread_detach)
 ADD_SUBDIRECTORY(11_8_1_pthread_cleanup_push)
 ADD_SUBDIRECTORY(11_8_2_pthread_cleanup_push)
+ADD_SUBDIRECTORY(11_9_1_pthread_attr_getstack)
 
 
 
