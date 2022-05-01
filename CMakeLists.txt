@@ -15,4 +15,7 @@ ADD_SUBDIRECTORY(11_6_2_1_pthread_setcancelstate)
 ADD_SUBDIRECTORY(11_6_3_pthread_setcanceltype)
 #和上一个效果是一样的，不含取消点
 ADD_SUBDIRECTORY(11_6_3_1_pthread_setcanceltype)
+#和上一个唯一不同的是加了pthread_testcancel
+ADD_SUBDIRECTORY(11_6_3_2_pthread_testcancel)
+
 
