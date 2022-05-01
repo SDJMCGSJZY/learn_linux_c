@@ -11,5 +11,6 @@ ADD_SUBDIRECTORY(11_6_1_pthread_cancel)
 ADD_SUBDIRECTORY(11_6_2_pthread_setcancelstate)
 #为上一个项目的补充
 ADD_SUBDIRECTORY(11_6_2_1_pthread_setcancelstate)
-
+#为自己根据文档写的代码,取消点，非取消点就无法取消线程
+ADD_SUBDIRECTORY(11_6_3_pthread_setcanceltype)
 
