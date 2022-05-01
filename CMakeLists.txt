@@ -17,5 +17,7 @@ ADD_SUBDIRECTORY(11_6_3_pthread_setcanceltype)
 ADD_SUBDIRECTORY(11_6_3_1_pthread_setcanceltype)
 #和上一个唯一不同的是加了pthread_testcancel
 ADD_SUBDIRECTORY(11_6_3_2_pthread_testcancel)
+ADD_SUBDIRECTORY(11_7_1_pthread_detach)
+
 
 
