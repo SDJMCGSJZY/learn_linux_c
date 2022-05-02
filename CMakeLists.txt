@@ -23,6 +23,7 @@ ADD_SUBDIRECTORY(11_8_2_pthread_cleanup_push)
 ADD_SUBDIRECTORY(11_9_1_pthread_attr_getstack)
 ADD_SUBDIRECTORY(11_9_2_detachstate)
 ADD_SUBDIRECTORY(12_1_1)
+ADD_SUBDIRECTORY(12_2_1_pthread_mutex_t)
 
 
 
