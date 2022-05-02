@@ -10,9 +10,15 @@ static pthread_cond_t cond; //定义条件变量
 
 static int g_avail = 0; //全局共享资源 
 
+static unsigned int t1 = 1;
+static unsigned int t2 = 2;
+static unsigned int t3 = 3;
+
+
 /* 消费者线程 */ 
 static void *consumer_thread(void *arg) 
 { 
+    int loops = *((int *)arg);
     for ( ; ; ) 
     { 
         pthread_mutex_lock(&mutex);
@@ -25,7 +31,8 @@ static void *consumer_thread(void *arg)
             g_avail--; //消费
             while(i--)
             {
-                printf("消费中 i = %d\n",i);
+                printf("loops = %d 消费中 i = %d\n",loops,i);
+                //sleep(1);
             }
         } 
         pthread_mutex_unlock(&mutex);//解锁 
@@ -36,18 +43,33 @@ static void *consumer_thread(void *arg)
 /* 主线程（生产者） */ 
 int main(int argc, char *argv[]) 
 { 
-    pthread_t tid; 
+    pthread_t tid,tid2,tid3; 
     int ret; 
+
     /* 初始化互斥锁和条件变量 */ 
     pthread_mutex_init(&mutex, NULL); 
     pthread_cond_init(&cond, NULL); 
     /* 创建新线程 */ 
-    ret = pthread_create(&tid, NULL, consumer_thread, NULL);
+    ret = pthread_create(&tid, NULL, consumer_thread, &t1);
     if (ret) 
     { 
         fprintf(stderr, "pthread_create error: %s\n", strerror(ret)); 
         exit(-1); 
     } 
+
+    ret = pthread_create(&tid2, NULL, consumer_thread, &t2);
+    if (ret) 
+    { 
+        fprintf(stderr, "pthread_create error: %s\n", strerror(ret)); 
+        exit(-1); 
+    }
+
+    ret = pthread_create(&tid3, NULL, consumer_thread, &t3);
+    if (ret) 
+    { 
+        fprintf(stderr, "pthread_create error: %s\n", strerror(ret)); 
+        exit(-1); 
+    }
     
     for ( ; ; ) 
     { 
