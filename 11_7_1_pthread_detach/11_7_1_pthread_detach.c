@@ -17,6 +17,8 @@ static void *new_thread_start(void *arg)
     } 
     printf("新线程start\n"); 
     sleep(2); 
+    printf("新线程 running\n");
+    sleep(2);
     //休眠2秒钟 
     printf("新线程end\n"); 
     pthread_exit(NULL); 
